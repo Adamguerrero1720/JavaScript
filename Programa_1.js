@@ -37,3 +37,33 @@ var suma = function(a,b){
 }
 
 suma();
+
+
+//Scope
+
+var Minombre = "Adam";
+
+function Name(){
+    var MiApellido = "Guerrero Tejada";
+    console.log(Minombre +" "+ MiApellido);
+}
+
+Name();
+
+//Hoisting: llamar una variable antes de ser declarada 
+var ComoLlamar = "Adam";
+console.log(ComoLlamar);
+ComoLlamar = "Yo";
+
+//Con Funciones
+var MiNombre = "Adam";
+
+
+function hey(){
+    
+    console.log("Hola" + Minombre);
+}
+hey();
+
+//Coercion hacer que un tipo de dato se convierta en otro, explicita e implicita.
+
