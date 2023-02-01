@@ -1,3 +1,5 @@
+/* Juego de piedra papel o tijera cpu vs jugador*/
+
 const Piedra = 1;
 const Papel = 2;
 const Tijera = 3;
