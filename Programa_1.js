@@ -67,3 +67,32 @@ hey();
 
 //Coercion hacer que un tipo de dato se convierta en otro, explicita e implicita.
 
+//Condicionales
+
+if (true){
+    console.log("Hola");
+}
+else{
+    console.log("No estoy");
+}
+
+var edad = 18;
+
+if (edad === 18){
+    console.log("Eres mayor de edad, puedes votar.");
+}
+else if(edad >18){
+    console.log("Puedes votar otra vez.");
+}
+else{
+    console.log("Aun no puedes votar.");
+}
+
+//operador ternario
+
+condition ? true : false;
+
+var numero = 1;
+
+var resultado = numero === 1 ? "Es uno." : "No soy uno";
+
