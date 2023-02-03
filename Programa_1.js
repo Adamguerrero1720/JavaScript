@@ -259,6 +259,20 @@ function carro(marca, modelo, annio){
 
   var CarroNuevo3 = new carro("Hyundai", "Tucson", 2022);
 
+
+
+  function Telefono(Id, Marca, Capacidad){
+    this.Id = Id;
+    this.Marca = Marca;
+    this.Capacidad = Capacidad;
+  }
+  
+  var TelefonoNuevo = new Telefono("001","Apple","64GB");
+  
+  var TelefonoNuevo2 = new Telefono("002","Samsung","128GB");
+  
+  var TelefonoNuevo3 = new Telefono("003","Xiaomi","128GB");
+  
   //RETO: crear una lista constructora por un loop.
 
   
@@ -290,3 +304,43 @@ function carro(marca, modelo, annio){
   }
   console.log(Automoviles)
 
+// Metodo de recorrido arrays
+
+var articulos = [
+  {nombre: "Bicicleta", costo: 3000},
+  {nombre: "TV", costo: 2500},
+  {nombre: "Libro", costo: 500},
+  {nombre: "Celular", costo: 15000},
+  {nombre: "Laptop", costo: 25000},
+  {nombre: "Teclado", costo: 1500},
+  {nombre: "Audifonos", costo: 1500},
+  {nombre: "Mouse", costo: 1650}
+];
+
+// .filter: Devuelve todos los elementos del array que cumplan con la condición dada
+var articulosFiltrados = articulos.filter(function(articulo){
+  return articulo.costo <= 2000;
+});
+
+// .map: nos devuelve los valores de la funcion original para verlos y manipularlos si es necesario
+var nombreArticulos = articulos.map(function(articulo){
+  return articulo.nombre;
+})
+
+// .find: Devuelve el primer elemento del array que cumpla con la condición dada
+
+var encuentraArticulo = articulos.find(function(articulo){
+  return articulo.nombre === "Bicicleta";
+})
+
+// .foreach:  Ejecuta lo que le definamos una vez por cada elemento de nuestro array
+
+articulos.forEach(function(articulo){
+  console.log(articulo.nombre)
+});
+
+// some: Comprueba si al menos un elemento del array cumple con la condición que le damos
+
+var articulosBaratos = articulos.some(function(articulo){
+  return articulo.costo <= 1000;
+  }) 
