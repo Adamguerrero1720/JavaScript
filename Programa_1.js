@@ -183,3 +183,110 @@ function solution(arraySecreto) {
       return false;
     }
 }
+
+// Loops for
+
+var estudiantes = ["Adam","Maria","Carlos","Rosa","Daniel"];
+
+function SaludarEstudiantes(estudiante){
+    console.log(`Hola, ${estudiante}`);
+}
+
+//1 
+for (let i = 0; i < estudiantes.length; i++) {
+    SaludarEstudiantes(estudiantes[i]);
+}
+
+ //2 generar variable en singular de nuestro array en plurar y llamar a la funcion.
+ for (var estudiante of estudiantes) {
+    SaludarEstudiantes(estudiante);
+ }
+
+
+// loop While
+
+var estudiantes = ["Adam","Maria","Carlos","Rosa","Daniel"];
+
+function SaludarEstudiantes(estudiante){
+    console.log(`Hola, ${estudiante}`);
+}
+
+while (estudiantes.length > 0) {
+    var estudiante = estudiantes.shift();
+    SaludarEstudiantes(estudiante);
+}
+
+
+function solution(estudiantes, deathCount, nuevo) {
+    while (deathCount > 0 ) {
+        estudiantes.pop();
+        deathCount--;
+    }
+    estudiantes.push(nuevo);
+    return estudiantes;
+  }
+
+  //objetos: estructura de datos que permite almacenar valores mediante propiedad
+
+  var Auto = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    annio: 2021
+  };
+
+  Auto.modelo;
+
+  var Auto = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    annio: 2021,
+    detalleAuto: function(){
+        console.log(`Auto ${this.modelo} ${this.annio}`)    
+    }
+  };
+
+// Funcion constructora objetos
+
+function carro(marca, modelo, annio){
+    this.marca = marca;
+      this.modelo = modelo;
+      this.annio = annio;
+  }
+
+  var CarroNuevo = new carro("Tesla","Model X",2023);
+
+  var CarroNuevo2 = new carro("Tesla", "Model Y", 2022);
+
+  var CarroNuevo3 = new carro("Hyundai", "Tucson", 2022);
+
+  //RETO: crear una lista constructora por un loop.
+
+  
+  let Automoviles = [];
+  let CantidadRegistrar = 0;
+  let CantidadRegistrada = 0;
+
+  function Automovil(marca, modelo, annio, estado){
+    this.marca = marca;
+    this.modelo = modelo;
+    this.annio = annio;
+    this.estado = estado;
+  }
+
+  CantidadRegistrar = prompt("Cuantos vehiculos deseas registrar?");
+
+  while (CantidadRegistrada < CantidadRegistrar ) {
+
+    let marca = prompt("Ingrese la marca:");
+    let modelo = prompt("Ingrese el modelo:");
+    let annio = prompt("Ingrese el annio:");
+    let estado = prompt("Ingrese el estado:");
+
+    var AutomovilNuevo = new Automovil(marca, modelo, annio, estado);
+
+    Automoviles.push(AutomovilNuevo);
+
+    CantidadRegistrada++;
+  }
+  console.log(Automoviles)
+
